@@ -1,0 +1,44 @@
+{
+  "name": "conta-corrente-api",
+  "version": "1.0.0",
+  "description": "api para controle de conta corrente, cadastro de usuarios, depositos e tranferencias entre contas banco e credito ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "pretest": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate",
+    "test": "mocha --reports"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.2",
+    "@hapi/hapi": "^20.1.2",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/vision": "^6.0.1",
+    "chai": "^4.3.4",
+    "dotenv": "^8.2.0",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-swagger": "^14.1.0",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mocha": "^8.3.2",
+    "mongoose": "^5.12.2",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.6.1",
+    "uuidv4": "^6.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0",
+    "sinon": "^10.0.0"
+  },
+  "imports": {
+    "#repository/*": "./src/repositories/*-repository.js",
+    "#service/*": "./src/services/*-service.js",
+    "#handler/*": "./src/handlers/*-handler.js",
+    "#route/*": "./src/routes/*-routes.js",
+    "#model/*": "./src/models/*-model.js"
+  }
+}

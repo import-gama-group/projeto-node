@@ -1,0 +1,15 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "gama",
+    "database": "node_gama_conta_corrente",
+    "host": "localhost",
+    "port": "5432",
+    "dialect": "postgres",
+    "define":{
+      "timestamps": true,
+      "underscored": true,
+      "freezeTableName": true 
+    }
+  }
+}
